@@ -37,19 +37,22 @@ A web application for searching and browsing movie information. Data is provided
 2. Install dependencies:
 
    ```bash
-   npm install
+   pnpm install
    ```
 
-3. Create a `.env` file in the project root and add your TMDB access token:
+3. Create a `.env` file in the project root:
 
    ```
+   VITE_BASE_URL=https://api.themoviedb.org/3
    VITE_TMDB_ACCESS_TOKEN=your_token
    ```
+
+   You can get an access token in your [TMDB account settings](https://www.themoviedb.org/settings/api).
 
 4. Run the project:
 
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 ## Demo
