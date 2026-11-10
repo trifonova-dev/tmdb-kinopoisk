@@ -1,0 +1,5 @@
+export * from "./CategoryPage/CategoryPage"
+export * from "./FilteredPage/FilteredPage"
+export * from "./MainPage/MainPage"
+export * from "./MovieDetailsPage/MovieDetailsPage"
+export * from "./SearchPage/SearchPage"
