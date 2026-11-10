@@ -1,5 +1,3 @@
 export const FilteredPage = () => {
-    return (
-        <div>Filtered movies</div>
-    )
+  return <div>Filtered movies</div>
 }

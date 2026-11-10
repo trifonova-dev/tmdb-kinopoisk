@@ -1,11 +1,10 @@
-import {Routing} from "@/common/routing";
+import { Routing } from "@/common/routing"
 
 export const App = () => {
-    return (
-        <>
-            <h1>TMDB Kinopoisk</h1>
-            <Routing/>
-        </>
-
-    )
+  return (
+    <>
+      <h1>TMDB Kinopoisk</h1>
+      <Routing />
+    </>
+  )
 }
