@@ -2,6 +2,11 @@ import { Link, NavLink } from "react-router"
 import logo from "@/assets/logoTMDB.svg"
 import { Path } from "@/common/routing/paths"
 import styles from "./Header.module.css"
+import { changeThemeModeAC, selectThemeMode } from "@/app/app-slice"
+import { useAppDispatch, useAppSelector } from "@/common/hooks"
+import { Button } from "@/common/components/Button/Button"
+import sunIcon from "@/assets/sun.svg"
+import moonIcon from "@/assets/moon.svg"
 
 const navItems = [
   { path: Path.MainPage, title: "Main" },
@@ -12,6 +17,16 @@ const navItems = [
 ]
 
 export const Header = () => {
+  const dispatch = useAppDispatch()
+  const themeMode = useAppSelector(selectThemeMode)
+
+  const changeThemeModeHandler = () => {
+    const newThemeMode = themeMode === "dark" ? "light" : "dark"
+
+    dispatch(changeThemeModeAC({ themeMode: newThemeMode }))
+    localStorage.setItem("themeMode", newThemeMode)
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -34,6 +49,15 @@ export const Header = () => {
             ))}
           </ul>
         </nav>
+        <div className={styles.themeToggle}>
+          <Button variant={"icon"} onClick={changeThemeModeHandler}>
+            {themeMode === "dark" ? (
+              <img src={sunIcon} alt={"Light theme"} />
+            ) : (
+              <img src={moonIcon} alt={"Dark theme"} />
+            )}
+          </Button>
+        </div>
       </div>
     </header>
   )
