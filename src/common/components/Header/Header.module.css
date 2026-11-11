@@ -60,10 +60,14 @@
     .container {
         padding: 0 16px;
         gap: 16px;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: auto 1fr auto;
     }
 
     .nav {
         overflow-x: auto;
     }
+}
+
+.themeToggle {
+    justify-self: end;
 }

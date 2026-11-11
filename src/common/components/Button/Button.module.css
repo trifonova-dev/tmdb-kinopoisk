@@ -1,0 +1,27 @@
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+.icon img {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s;
+}
+
+.icon:hover:enabled {
+    border-color: var(--color-primary);
+    background-color: var(--color-surface-hover);
+}
+
+.icon:hover:enabled img {
+    transform: rotate(20deg) scale(1.1);
+}
