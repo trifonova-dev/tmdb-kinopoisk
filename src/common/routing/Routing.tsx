@@ -8,16 +8,7 @@ import {
   SearchPage,
 } from "@/features/movies/ui"
 import { FavoritesPage } from "@/features/favorites/ui/FavoritesPage/FavoritesPage"
-
-export const Path = {
-  MainPage: "/",
-  FavoritesPage: "/favorites",
-  CategoryPage: "/category",
-  FilteredPage: "/filtered",
-  MovieDetailsPage: "/movie/:movieId",
-  SearchPage: "/search",
-  NotFound: "*",
-} as const
+import { Path } from "@/common/routing/paths"
 
 export const Routing = () => {
   return (
