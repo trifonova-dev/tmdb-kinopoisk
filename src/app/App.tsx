@@ -1,9 +1,10 @@
 import { Routing } from "@/common/routing"
+import { Header } from "@/common/components"
 
 export const App = () => {
   return (
     <>
-      <h1>TMDB Kinopoisk</h1>
+      <Header />
       <Routing />
     </>
   )
